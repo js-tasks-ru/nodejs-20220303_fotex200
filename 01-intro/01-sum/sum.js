@@ -1,5 +1,11 @@
 function sum(a, b) {
-  /* ваш код */
+  [...arguments].map(i => {
+    if (typeof i !== 'number') {
+      throw new TypeError('Not a number')
+    }
+  });
+
+  return a + b;
 }
 
 module.exports = sum;
